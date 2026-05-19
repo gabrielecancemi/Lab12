@@ -12,7 +12,11 @@ class Controller:
         self._listCountry = []
 
     def fillDD(self):
-        pass
+        for y in range(2015, 2019):
+            self._view.ddyear.options.append(ft.dropdown.Option(y))
+
+        nazioni = self._model.getNazioni()
+        self._view.update_page()
 
 
     def handle_graph(self, e):
